@@ -60,10 +60,12 @@ public class Base32Test {
     public void getCharIndex_exception() throws Exception {//測試當'i'不再編碼中的拋出例外
         try{
             int index = Base32.getCharIndex('i');
-            assertTrue(false);
+
         }catch(IllegalArgumentException e){
             assertTrue(true);
+            return;
         }
+        fail("IllegalArgumentException no throw");
     }
     @Test
     public void getCharIndex_padLeftWithZerosToLength() throws Exception {//測試補0功能
@@ -71,7 +73,7 @@ public class Base32Test {
             String index = Base32.padLeftWithZerosToLength("jw",6);
             assertEquals("0000jw",index);
         }catch(Exception e){
-            assertTrue(false);
+            fail("IllegalArgumentException throw");
         }
     }
 
