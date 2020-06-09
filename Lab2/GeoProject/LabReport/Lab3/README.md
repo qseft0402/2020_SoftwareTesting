@@ -1,1 +1,0 @@
-Please place Lab3 report in this directory.

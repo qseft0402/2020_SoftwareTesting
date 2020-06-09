@@ -1,1 +1,0 @@
-Please place Lab1 report in this directory.
